@@ -22,7 +22,7 @@ services:
       start_period: 30s
 
   api:
-    image: ghcr.io/your-github-user/conferences-api:0.1.0
+    image: ghcr.io/niko0004stud/conferences-api:0.1.0
     restart: unless-stopped
     environment:
       SPRING_PROFILES_ACTIVE: docker
@@ -39,7 +39,7 @@ services:
       start_period: 60s
 
   frontend:
-    image: ghcr.io/your-github-user/conferences-frontend:0.1.0
+    image: ghcr.io/niko0004stud/conferences-frontend:0.1.0
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/healthz"]
